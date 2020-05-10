@@ -1,0 +1,36 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use 5.8.0;
+
+my $solution = 'pypy ../submissions/accepted/rgl3.py';
+
+sub main {
+  for my $tcid (20 ... 40) {
+    srand 72340986298374561 + $tcid;
+
+    my $finname = sprintf 'secret/%02d.in', $tcid;
+    my $ansname = sprintf 'secret/%02d.ans', $tcid;
+
+    open my $fin, ">$finname";
+    print $fin generate();
+    close $fin;
+
+    `$solution < $finname > $ansname &`;
+  }
+}
+
+sub generate {
+  my $n = 50 + int rand 9900;
+  my $h = 10 + int rand 40;
+  my $max_val = $n * 3;
+  if ($max_val > 1000000) {
+    $max_val = 1000000;
+  }
+  my @v = map {1 + int rand $max_val} (1 ... $n);
+
+  "$n $h\n@v\n";
+}
+
+main;

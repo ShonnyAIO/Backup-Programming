@@ -1,0 +1,42 @@
+Low Effort League
+
+The teams in your local rugby league aren't particularly good, but they make up
+for it in enthusiasm. We are going to organise a single-elimination knockout
+tournament between them, where the  teams play  rounds. In each round,
+the th remaining team pairs up with the th team and one or the
+other team is eliminated.
+
+figure[h!]
+  
+  sample2
+ fig:loweffortleague
+figure
+
+Each team has a scalar skill level. In the normal course of things, a team with
+higher skill level will always beat a team with lower skill level. However,
+training plays a part too: if one team studies another, learns its techniques,
+and trains against them, it can win.
+
+The number of hours a team with skill  must train to beat a team with skill
+ (where ) is . This training only affects that one game
+(it does not transfer to other teams).
+
+You would quite like your favourite team to win the tournament. If you take
+complete control over how every team trains, you can always make this happen.
+What is the minimum number of hours needed, in total across all teams, in order
+for your team (team ) to win?
+
+Input
+
+The input consists of:
+itemize
+  one line containing the integer  (), the number of
+        rounds in the tournament.
+  one line with  integers 
+ ( for each ), where 
+        is the skill level of the th team.
+itemize
+
+Output
+
+Output the smallest number of hours needed for team  to win the tournament.

@@ -1,0 +1,7 @@
+name: Feeding Seals
+author: Ian Pratt-Hartmann
+license: cc by-sa
+source: United Kingdom and Ireland Programming Contest (UKIEPC) 2019
+source_url: http://ukiepc.info/2019
+limits:
+  time_multiplier: 2

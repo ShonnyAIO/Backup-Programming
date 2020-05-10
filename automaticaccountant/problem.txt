@@ -1,0 +1,50 @@
+Automatic Accountant
+
+The bank you work in has purchased an advanced technological solution to the
+problems it has with counting money deposited by clients.
+The machine works by running each individual coin along a sloped track.
+At every integer multiple of centimetres along, starting from cm, there is
+a slot in the track with a bucket underneath.
+
+figure[h!]
+  
+  illustration
+  fig:automaticaccountant
+figure
+
+The slot will allow a coin to fall in, if
+   the thickness of the coin (in millimetres) is
+        less than or equal to the width of the slot
+        (also in millimetres),
+and
+   the mass of the coin (in grams) is greater than or equal to
+        the trigger mass of the slot (also in grams).
+
+Since the slots are spaced  apart centre-to-centre, and since there can be
+a large number of coins (or other metal shapes) inserted, the amount of wear
+on the track will depend on total distance travelled by all coins.
+
+Given a list of the coins that will be deposited, what total distance will they
+travel, in centimetres?
+
+Input
+
+The input consists of:
+itemize
+  one line containing the number of slots,  ().
+   further lines, the th line containing the width of a slot in millimetres
+        and trigger mass in grams of the th slot,  and  respectively 
+        ().
+  one line containing the integer  (), the number
+        of coins.
+   further lines, the th line containing the thickness in millimetres and mass
+        in grams of the th coin,  and  respectively
+        ().
+itemize
+
+It is guaranteed that every coin will be able to fall into at least one slot.
+
+Output
+
+Output the total distance in centimetres travelled by coins.
+

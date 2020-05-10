@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+
+import os
+import random
+import sys
+
+def noise(n, m, c, ans=None):
+  res = []
+  for i in range(n):
+    res += [[]]
+    for j in range(m):
+      res[-1] += [random.randint(1, c)]
+  return res
+
+def perturb(n, m, c, ans=None):
+  assert ans is not None
+  assert((ans*m) % c == 0)
+  good = []
+  bad = []
+  freqs = dict()
+  for i in range(c): good += [i+1 for j in range(ans*m//c)]
+  while len(good) + len(bad) < n*m: bad += good
+  bad += [random.randint(1, c)]
+
+  random.shuffle(good)
+  random.shuffle(bad)
+
+  res = []
+  for i in range(ans): res += [good[i*m:(i+1)*m]]
+  for i in range(n-ans): res+= [bad[i*m:(i+1)*m]]
+  random.shuffle(res)
+  return res
+
+def write_case(tc, n, m, c, strategy, ans=None):
+  print('writing case {}'.format(tc))
+  random.seed('ukiepc2019lkjnvj-' + str(tc))
+  data = strategy(n=n, m=m, c=c, ans=ans)
+
+  tcname = f'../data/secret/{tc:02d}'.format(tc=tc)
+  with open(tcname +'.in', 'w') as f_in:
+    f_in.write("{} {} {}\n".format(n, m, c))
+    for i in data:
+      f_in.write(' '.join(map(str, i)) + '\n')
+
+def main():
+  write_case(tc= 1, n=5, m=10, c=2, strategy=noise)
+  write_case(tc= 2, n=5, m=1000, c=1000, strategy=noise)
+  write_case(tc= 3, n=10, m=20, c=4, strategy=noise)
+  write_case(tc= 4, n=10, m=30, c=2, ans=10, strategy=perturb)
+  write_case(tc= 5, n=10, m=40, c=3, strategy=noise)
+  write_case(tc= 6, n=10, m=50, c=4, strategy=noise)
+  write_case(tc= 7, n=20, m=20, c=4, strategy=noise)
+  write_case(tc= 8, n=20, m=20, c=10, ans=3, strategy=perturb)
+  write_case(tc= 9, n=20, m=20, c=8, strategy=noise)
+  write_case(tc=10, n=22, m=20, c=8, strategy=noise)
+  write_case(tc=11, n=23, m=20000, c=800, ans=16, strategy=perturb)
+  write_case(tc=12, n=24, m=20, c=8, strategy=noise)
+  write_case(tc=13, n=25, m=20, c=8, strategy=noise)
+  write_case(tc=14, n=30, m=24, c=4, strategy=noise)
+  write_case(tc=15, n=32, m=32, c=4, strategy=noise)
+  write_case(tc=16, n=32, m=1000, c=2, strategy=noise)
+  write_case(tc=17, n=32, m=10000, c=10000, ans=12, strategy=perturb)
+  write_case(tc=18, n=32, m=100000, c=40000, ans=24, strategy=perturb)
+  write_case(tc=19, n=32, m=1000, c=8, strategy=noise)
+  write_case(tc=20, n=36, m=86400, c=4096, ans=32, strategy=perturb)
+  write_case(tc=21, n=40, m=1000, c=400, ans=30, strategy=perturb)
+  write_case(tc=22, n=40, m=10000, c=8, strategy=noise)
+  write_case(tc=23, n=40, m=40000, c=100000, ans=25, strategy=perturb)
+  write_case(tc=24, n=40, m=2500, c=97500, ans=39, strategy=perturb)
+
+if __name__=='__main__':
+  main()

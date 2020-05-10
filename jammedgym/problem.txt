@@ -1,0 +1,39 @@
+Jammed Gym
+
+You are at the fitness centre to run through your exercise programme. You must
+use the kinds of exercise machine in an order precisely dictated by the
+programme, although there may be more than one instance of a machine.
+
+You start at the centre of a unit circle around which the exercise stations are
+arranged. You can walk directly between any two points in the circle, and you
+may also visit the same point multiple times.
+See Figure fig:jammedgym below for an example.
+
+figure[h!]
+  
+  fig
+  Illustration of Sample Input 1. Types of machine: 
+  fig:jammedgym
+figure
+
+Exercise is an important and noble endeavour, but in today's busy world we must
+strive for efficiency in everything we do. Find the most efficient way of
+visiting exercise stations that matches the order given.
+
+Input
+itemize
+The first line of input contains the number of exercises in the programme,
+       ().
+The second line of input contains  space-separated integers
+      each denoting the type of an item on the programme  ().
+      There will always be at least one station for each programme in this list.
+The third line of input contains the number of stations,
+       ().
+The fourth line of input contains  space-separated integers
+      each denoting the type of a station  ().
+itemize
+
+Output
+
+Output the minimum distance you will need to walk.
+Your answer must be accurate to an absolute or relative error of .

@@ -1,0 +1,7 @@
+INT(1, 3*10^5, n) NEWLINE
+
+REP(n-1)
+  INT(1, n, a) SPACE
+  INT(1, n, b) NEWLINE
+  ASSERT(a != b)
+END

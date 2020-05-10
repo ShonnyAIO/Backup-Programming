@@ -1,0 +1,41 @@
+Knocked Ink
+
+You knocked over the inkwell for the team fountain pen... Now spots of ink are
+beginning to form on the page and spread out. This is really going to hamper
+your speed at writing up programming contest solutions.
+
+The ink spreads out by forming infinitesimally-small blots on the page. A blot
+that appears at time  seconds after the incident grows in radius smoothly,
+at a rate of cm per second, and may eventually overlap with other blots on
+the page.
+
+At first the page is still usable, but when the combined size of the ink blots
+grows large enough, you will have to abandon your work and find another piece
+of paper upon which to type up solutions.
+
+How long will it take for this to happen?
+
+figure[h!]
+  
+  sample1
+  Illustration of Sample Input 1.
+  fig:knockedink
+figure
+
+Input
+
+The input consists of:
+itemize
+  one line with the number of inkblots,  (), and the
+        real-valued total area of ink in square centimetres at which the paper
+        must be abandoned,  ().
+   further lines, each with the  and  coordinates in centimetres
+        of an ink blot () and the time in seconds at
+        which the blot first appears,  ().
+itemize
+
+Output
+
+Output the time in seconds at which the ink blots cover exactly  square
+centimetres of the infinitely-large page.
+Your answer must be accurate to an absolute or relative error of .

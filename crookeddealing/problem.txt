@@ -1,0 +1,40 @@
+Crooked Dealing
+
+This week you started a flashy new job in Leeds as a poker dealer. Your task
+will be to hand out the cards for games. The base pay is not particularly good,
+but you found out that you can earn a lot from tips if you deal the cards well.
+
+The most generous customers prefer that their opponents at the table don't
+receive any pairs of cards with the same number; so to keep them happy you will
+make sure this never happens.
+
+You already know the numbers on every card in the pile , and the number of
+cards any player must have in their hand. Find how many hands you can make at
+once without introducing a pair.
+
+figure[h!]
+  
+  sample
+  Illustration of a solution to Sample Input 2.
+  fig:crookeddealing
+figure
+
+Input
+The input consists of:
+  itemize
+    A line with two integers  and  (), the
+          number of cards in the pile, and the number of cards in a hand.
+    A line with  integers  (
+          for all ), the numbers on the cards in no particular order.
+  itemize
+
+Output
+  If it is not possible to make any hands at all without introducing a pair,
+  output impossible.
+
+  Otherwise, output  lines (where  is the maximum possible number of
+  players) each containing  numbers from the input. You may not use any
+  number any more times than it appears in .
+
+  If there are multiple answers with a maximum value of , you may output any
+  one of them.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     lang="en-gb"
+     version="1.1"
+     width="375"
+     height="93.75" >
+<title>Case</title>
+<rect width="100%" height="100%" fill="white"/>
+  <circle cx='46.875' cy='46.875' r='46.875' fill='none' stroke='black' />
+  <circle cx='359.375' cy='46.875' r='15.625' fill='none' stroke='black' />
+</svg>

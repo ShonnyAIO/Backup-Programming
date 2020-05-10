@@ -1,0 +1,35 @@
+Mosaic Mansion
+
+A mosaic is a picture made from square tiles arranged in a grid, at least for
+today's purposes.
+
+We would like to make a mosaic with exactly the same number of tiles of each
+colour. We will do this by taking an existing design and removing some of the
+rows from it.
+
+figure[h!]
+  
+  sample
+  Illustration of a solution to Sample Input 1. The three rows
+  annotated with white can be kept, giving  of each colour of tile.
+  fig:mosaic
+figure
+
+What is the greatest number of rows we can keep?
+
+Input
+
+itemize
+  The first line of input contains
+        the number of rows,  (),
+        the number of columns,  (), and
+        the number of colours,  () in the mosaic
+        respectively.
+  Each of the next  lines contains  colours of cells
+         ().
+itemize
+
+Output
+
+Output the greatest number of rows that can be kept while keeping equal
+representation for each colour in the input, or  if no rows can be kept.

@@ -1,0 +1,56 @@
+\documentclass[class=minimal,border=0pt]{standalone}
+\usepackage{fancybox,pstricks,pst-node}
+
+\setlength{\fboxrule}{1.5pt}
+\pssetlength{\unitlength}{1}
+
+\newcommand{\team}[2]{\rnode{#1}{\psset{fillcolor=white,linestyle={#2}}%
+    \psframebox{\makebox[1.75\unitlength][c]%
+    {#1}\rule[-.2\unitlength]{0cm}{0.6\unitlength}}}}
+
+\newcommand{\game}[5]{\vbox{\hsize=3.5\unitlength\addtolength{\hsize}{2\fboxsep}
+    \addtolength{\hsize}{2\fboxrule}\team{#1}{#4}\par
+    \vspace{#3\unitlength}\par\team{#2}{#5}}}
+
+\begin{document}
+  \pagestyle{empty}
+  \thispagestyle{empty}
+  \psset{linewidth=1pt,framearc=0.3,fillstyle=solid}
+
+  \begin{pspicture}(0,0)(10.25,12)
+    % R0
+    \rput{0}(1,10.5){\game{Team1=1}{Team2=2}{.5}{solid}{dashed}}
+    \rput{0}(1, 7.5){\game{Team3=3}{Team4=4}{.5}{solid}{dashed}}
+    \rput{0}(1, 4.5){\game{Team5=8}{Team6=7}{.5}{dashed}{solid}}
+    \rput{0}(1, 1.5){\game{Team7=6}{Team8=5}{.5}{dashed}{solid}}
+
+    % R1
+    \rput{0}(3.75,9){\game{Team1 +$1^2$}{Team3 +$1^2$}{2.25}{solid}{dashed}}
+    \rput{0}(3.75,3){\game{Team6 $+1^2$}{Team8 $+1^2$}{2.25}{dashed}{solid}}
+
+    % R2
+    \rput{0}(6.5,6){\game{Team1 +$2^2$}{Team8 $+2^2$}{4.75}{solid}{dashed}}
+
+    % Winner
+    \rput{0}(9.0625,6){\team{Team1 $+4^2$}{solid}}
+
+    \psset{angleB=180,linearc=5pt}
+    \ncdiag{-}{Team1=1}{Team1 +$1^2$}
+    \ncdiag[linestyle=dashed]{-}{Team2=2}{Team1 +$1^2$}
+    \ncdiag{-}{Team3=3}{Team3 +$1^2$}
+    \ncdiag[linestyle=dashed]{-}{Team4=4}{Team3 +$1^2$}
+    \ncdiag[linestyle=dashed]{-}{Team5=8}{Team6 $+1^2$}
+    \ncdiag{-}{Team6=7}{Team6 $+1^2$}
+    \ncdiag[linestyle=dashed]{-}{Team7=6}{Team8 $+1^2$}
+    \ncdiag{-}{Team8=5}{Team8 $+1^2$}
+
+    \ncdiag{-}{Team1 +$1^2$}{Team1 +$2^2$}
+    \ncdiag[linestyle=dashed]{-}{Team3 +$1^2$}{Team1 +$2^2$}
+    \ncdiag[linestyle=dashed]{-}{Team6 $+1^2$}{Team8 $+2^2$}
+    \ncdiag{-}{Team8 $+1^2$}{Team8 $+2^2$}
+
+    \ncdiag{-}{Team1 +$2^2$}{Team1 $+4^2$}
+    \ncdiag[linestyle=dashed]{-}{Team8 $+2^2$}{Team1 $+4^2$}
+
+  \end{pspicture}
+\end{document}

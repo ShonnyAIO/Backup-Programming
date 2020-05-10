@@ -1,0 +1,9 @@
+name: Mosaic Mansion
+author: Robin Lee
+license: cc by-sa
+source: United Kingdom and Ireland Programming Contest (UKIEPC) 2019
+source_url: http://ukiepc.info/2019
+limits:
+  memory: 2048
+  time_multiplier: 1
+  time_safety_margin: 1.5

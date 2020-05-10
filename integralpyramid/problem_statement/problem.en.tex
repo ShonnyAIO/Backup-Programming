@@ -1,0 +1,24 @@
+\problemname{Integral Pyramid}
+
+Pascal's triangle is a marvel of the combinatorical world, and what's more you
+can easily build one for yourself at home.
+
+The lowest row has $n$ numbers. The next row is staggered and has $n-1$ numbers,
+where the $i$th is the sum of the $i$th and the $i+1$th on the previous row.
+
+You can choose any positive integers for the lowest row, but the single cell on
+the top row needs to be equal to a given $x$. Is this possible?
+
+\section*{Input}
+
+\begin{itemize}
+  \item The only line contains the number of rows, $n$ ($1 \le n \le 20$),
+        and the value needed at the top, $x$ ($1 \le x \le 10^9$).
+\end{itemize}
+
+\section*{Output}
+
+If a pyramid can be constructed, output all of the numbers on each row, starting
+from the top. Every number must be greater than or equal to $1$.
+
+Otherwise, output \texttt{impossible}.

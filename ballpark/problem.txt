@@ -1,0 +1,35 @@
+Ballpark Estimate
+
+Giving the right level of detail is an important skill for efficient
+communication. Sometimes, only the high-level message matters.
+
+For example, whenever a person asks for a number, often they just want an
+estimate.  If the value is in the millions, they do not need to know the
+precise number of hundreds and tens.
+Likewise, if the value is in the billions, they do not necessarily care about
+little things like millions.
+
+figure[h!]
+  
+  chart
+  Illustration of ballpark figures versus actual figures, as a log chart.
+  fig:ballpark
+figure
+
+Given a (possibly very large) number, print its numerically closest
+representation that has only one digit other than trailing zeroes.
+
+The closeness of the representation  of a number  is defined by
+.
+
+Input
+
+The input consists of:
+itemize
+  one line with the positive integer  ().
+itemize
+
+Output
+
+Output the closest number to  with exactly one significant (non-zero) figure.
+If there are two equally-close answers, print the larger one.

@@ -1,0 +1,11 @@
+INT(1,14, r)
+NEWLINE
+
+SET(n=2^r)
+
+REP(n, SPACE)
+  INT(1, 10^6)
+END
+NEWLINE
+
+EOF

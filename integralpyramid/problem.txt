@@ -1,0 +1,24 @@
+Integral Pyramid
+
+Pascal's triangle is a marvel of the combinatorical world, and what's more you
+can easily build one for yourself at home.
+
+The lowest row has  numbers. The next row is staggered and has  numbers,
+where the th is the sum of the th and the th on the previous row.
+
+You can choose any positive integers for the lowest row, but the single cell on
+the top row needs to be equal to a given . Is this possible?
+
+Input
+
+itemize
+  The only line contains the number of rows,  (),
+        and the value needed at the top,  ().
+itemize
+
+Output
+
+If a pyramid can be constructed, output all of the numbers on each row, starting
+from the top. Every number must be greater than or equal to .
+
+Otherwise, output impossible.

@@ -1,0 +1,10 @@
+INT(1, 40, n) SPACE
+INT(1, 10^5, m) SPACE
+INT(1, 10^5, c) NEWLINE
+
+REP(n)
+  REP(m, SPACE)
+    INT(1, c)
+  END
+  NEWLINE
+END

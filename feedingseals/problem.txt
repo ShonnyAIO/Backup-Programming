@@ -1,0 +1,26 @@
+Feeding Seals
+
+You are in charge of feeding the seals in the Welsh Mountain Zoo. This involves
+purchasing buckets of fish and allocating them to volunteers to trek into the
+enclosure and distribute fairly to the blubbery residents.
+
+The buckets of fish are already set out. Each volunteer can be assigned to
+carry either one or two of these buckets, as long as the combined weight of the
+buckets is small enough.
+
+How many volunteers will you need to distribute all of the fish in one trip?
+
+Input
+
+itemize
+  The first line contains the number of buckets to be delivered, 
+        (), and the integer carrying capacity of a
+        volunteer,  ().
+  The second line contains the integer weights of each of the 
+        buckets,  ().
+itemize
+
+Output
+
+Output the minimum number of volunteers required to deliver all of the buckets
+of fish.

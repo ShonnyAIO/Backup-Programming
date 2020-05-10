@@ -1,0 +1,11 @@
+INT(1,150,n) SPACE
+INT(0,n*(n-1),m) NEWLINE
+
+REPI(i,m)
+  INT(1,n,f[i]) SPACE
+  INT(1,n,g[i]) SPACE
+  INT(0,10^6,a[i]) NEWLINE
+  ASSERT(f[i] != g[i])
+END
+
+ASSERT(UNIQUE(f, g))

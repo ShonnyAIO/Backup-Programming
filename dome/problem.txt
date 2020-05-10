@@ -1,0 +1,40 @@
+Dome Construction
+
+The world's largest indoor water park is built inside a hemispherical dome that
+was once used as an aircraft hangar. The park attracts more than 
+visitors per day and is big enough that it even has its own tropical
+micro-climate with clouds forming inside.
+
+Management would like to expand business operations by opening another branch
+in the dome of your local cathedral. The micro-climate is a key selling point,
+so to really capitalise on the cathedral they asked you to expand the dome's
+radius so that it contains at least a given number of clouds. A cloud is
+contained if its centre is on or inside the boundary of the dome.
+
+
+
+
+
+
+
+You are a cloud engineer by trade, and hence a competent meteorologist. You
+already identified several potential clouds close by and plotted them in three
+dimensions relative to the centre of the current structure. In order to capture
+enough of them, how large do you need to make the radius of the dome?
+
+Input
+
+itemize
+  The first line contains the number of clouds you found, , and the
+        number that must be contained, , respectively
+        ().
+  The next  lines each contain three real numbers , the
+        coordinates of the th cloud relative to the centre of the dome
+        (). Every cloud has a non-negative
+        -coordinate.
+itemize
+
+Output
+
+Output the minimum radius of the dome required to enclose at least  points.
+Your answer must be accurate to an absolute or relative error of .

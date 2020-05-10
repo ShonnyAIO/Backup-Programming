@@ -1,0 +1,33 @@
+PHPunit
+
+Test Drive Development: Es importante tener un código limpio, donde el conjunto de funciones se debe asegurar e ir probando cada vez que se incorpore.
+
+1) Escribir un fallo
+2) Realizar la prueba
+3) Refactorizar
+
+BabySteps , HurrytoGreen , TheSimplestThingThatCouldPossiblyWork ; Refactor ; CondeSmells
+
+Factor Kata: Robert Martin
+
+The requirements
+
+All numbers can be broken down into a product of primes
+
+Write a class named "PrimeFactors" that has one method called generate
+
+The generate method takes an integer argument and returns array
+That Array contains the prime factors in numerical sequence.
+
+
+FizzBuzz Kata = Kata Feedback , prueba de fuego 
+
+Write a class named "FizzBuzz" with a method: print. That given an integer greater that 0. The print method takes an integer an return a String.
+
+1) It would return a string with the numbers
+
+2) If multiple of 3, return "Fizz" Instead of the number
+
+3) If multiple of 5, return "Buzz" Instead of the number
+
+4) If multiple of 3 and 5, return "FizzBuzz" instead of the number
